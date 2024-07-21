@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeffrey Chan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="Home">
+        <div class="container">
+            <nav> 
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#SkillsandTech">Skills and Technologies</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <div class="text-and-image">
+                    <div class="text">
+                        <p>Computer Engineering Student</p>
+                        <h1> Hi, I'm <span>Jeffrey Chan</span> <br>from NYC and an aspiring software engineer. </h1>
+                    </div>
+                    <img src="images/user.png" alt="Profile Picture">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <h1>About Me</h1>
+            <p>I'm a dedicated junior majoring in Computer Engineering with an unwavering passion for software engineering. Despite being immersed in the intricacies of hardware design and system architecture, my heart lies in coding and creating innovative software solutions. Beyond academics, I find solace in weightlifting, a hobby that not only strengthens my body but also fosters discipline and determination. Moreover, I cherish my time spent with friends and family, valuing the balance between academic rigor and social interaction.</p>
+        </div>
+    </div>
+    
+    <section id="education">
+        <div class="education-outline">
+            <div class="container">
+                <h1 class="title">Education</h1>
+                <div class="education-details-container">
+                    <div class="education-box">
+                        <p>College: Stony Brook University</p>
+                        <p>Expected Graduation: May 2026</p>
+                        <p>Degree: Bachelor of Engineering in Computer Engineering</p>
+                        <p>GPA: 3.85/4.0</p>
+                        <div class="tab">
+                            <a href="#coursework" class="tab-label" onclick="toggleTab('coursework')">Relevant Coursework</a>
+                            <div id="coursework" class="tab-content">
+                                
+                                <p>Programming Fundamentals (A)</p>
+                                <p><br></p>
+                                <p>Advanced Programming and Data Structures (A)</p>
+                                <p><br></p>
+                                <p>Software Techniques for Engineers (A)</p>
+                                <p><br></p>
+                                <p>Embedded System Design (A)</p>
+                                <p><br></p>
+                                <p>Digital Design using VHDL and PLDS (A)</p>
+                                <p><br></p>
+                                <p>Real-Time Operating System (In progress)</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="SkillsandTech">
+        <div class="SkillsandTech-outline">
+            <div class="container">
+                <h1 class="title">Skills and Technologies</h1>
+                <div class="SkillsandTech-details-container">
+                    <div class="skills-box">
+                        
+                        <div class="tab">
+                            <a href="#Languages" class="tab-label" onclick="toggleTab('Languages')">Programming Languages</a>
+                            <div id="Languages" class="tab-content">
+                                <p>Python</p>
+                                <p><br></p>
+                                <p>C++</p>
+                                <p><br></p>
+                                <p>C</p>
+                                <p><br></p>
+                                <p>Assembly</p>
+                                <p><br></p>
+                                <p>VHDL</p>
+                                <p><br></p>
+                                <p>MATLAB</p>
+                                <p><br></p>
+                                <p>Arduino</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="technology-box">
+                        <div class="tab">
+                            <a href="#Technologies" class="tab-label" onclick="toggleTab('Technologies')">Technologies</a>
+                            <div id="Technologies" class="tab-content">
+                                <p>React</p>
+                                <p><br></p>
+                                <p>Flask</p>
+                                <p><br></p>
+                                <p>SQL</p>
+                                <p><br></p>
+                                <p>HTML</p>
+                                <p><br></p>
+                                <p>CSS</p>
+                                <p><br></p>
+                                <p>VS Code</p>
+                                <p><br></p>
+                                <p>Atmel Studios</p>
+                                <p><br></p>
+                                <p>Git/Github</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <h2>Feel free to contact me at jjchann31@gmail.com or submit the form below</h2>
+            <form action="jjchann31@gmail.com" method="GET" id="contact-form">
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" placeholder="Enter your subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" placeholder="Enter your message" name="message" rows="6" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    
+</body>
+</html>
