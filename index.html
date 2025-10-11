@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Home Section -->
     <div id="Home">
         <div class="container">
             <nav> 
@@ -15,8 +16,9 @@
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#education">Education</a></li>
-                    <li><a href="#SkillsandTech">Skills and Technologies</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#SkillsandTech">Skills</a></li>
+                    <li><a href="#WorkExperience">Work Experience</a></li>
+                    <li><a href="#Projects">Projects</a></li>
                 </ul>
             </nav>
             <div class="header-text">
@@ -31,13 +33,17 @@
         </div>
     </div>
 
+    <!-- About Section -->
     <div id="about">
         <div class="container">
             <h1>About Me</h1>
-            <p>I'm a dedicated junior majoring in Computer Engineering with an unwavering passion for software engineering. Despite being immersed in the intricacies of hardware design and system architecture, my heart lies in coding and creating innovative software solutions. Beyond academics, I find solace in weightlifting, a hobby that not only strengthens my body but also fosters discipline and determination. Moreover, I cherish my time spent with friends and family, valuing the balance between academic rigor and social interaction.</p>
+            <p>I'm a senior studying computer engineering at Stony Brook University. 
+               My interests are in embedded systems and frontend development! On my free time I enjoy hanging out with friends, playing video games, and working out.
+            </p>
         </div>
     </div>
     
+    <!-- Education Section -->
     <section id="education">
         <div class="education-outline">
             <div class="container">
@@ -47,23 +53,19 @@
                         <p>College: Stony Brook University</p>
                         <p>Expected Graduation: May 2026</p>
                         <p>Degree: Bachelor of Engineering in Computer Engineering</p>
-                        <p>GPA: 3.85/4.0</p>
+                        <p>GPA: 3.86/4.0</p>
                         <div class="tab">
                             <a href="#coursework" class="tab-label" onclick="toggleTab('coursework')">Relevant Coursework</a>
                             <div id="coursework" class="tab-content">
-                                
-                                <p>Programming Fundamentals (A)</p>
-                                <p><br></p>
-                                <p>Advanced Programming and Data Structures (A)</p>
-                                <p><br></p>
-                                <p>Software Techniques for Engineers (A)</p>
-                                <p><br></p>
-                                <p>Embedded System Design (A)</p>
-                                <p><br></p>
-                                <p>Digital Design using VHDL and PLDS (A)</p>
-                                <p><br></p>
-                                <p>Real-Time Operating System (In progress)</p>
-                               
+                                <p>Programming Fundamentals</p>
+                                <p>Advanced Programming and Data Structures </p>
+                                <p>Software Techniques for Engineers </p>
+                                <p>Embedded System Design I</p>
+                                <p>Embedded System Design II</p>
+                                <p>Digital Design using VHDL and PLDS</p>
+                                <p>Real-Time Operating System </p>
+                                <p>Digital Image Processing</p>
+                                <p>Computer Vision</p>
                             </div>
                         </div>
                     </div>
@@ -72,51 +74,119 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="SkillsandTech">
         <div class="SkillsandTech-outline">
             <div class="container">
-                <h1 class="title">Skills and Technologies</h1>
+                <h1 class="title">Skills</h1>
                 <div class="SkillsandTech-details-container">
+
+                    <!-- Programming Languages -->
                     <div class="skills-box">
-                        
                         <div class="tab">
                             <a href="#Languages" class="tab-label" onclick="toggleTab('Languages')">Programming Languages</a>
                             <div id="Languages" class="tab-content">
-                                <p>Python</p>
-                                <p><br></p>
                                 <p>C++</p>
-                                <p><br></p>
                                 <p>C</p>
-                                <p><br></p>
-                                <p>Assembly</p>
-                                <p><br></p>
+                                <p>Python</p>
+                                <p>Assembly (MIPS, AVR)</p>
                                 <p>VHDL</p>
-                                <p><br></p>
+                                <p>SQL</p>
                                 <p>MATLAB</p>
-                                <p><br></p>
-                                <p>Arduino</p>
                             </div>
                         </div>
                     </div>
-                    <div class="technology-box">
+
+                    <!-- Embedded Systems -->
+                    <div class="skills-box">
                         <div class="tab">
-                            <a href="#Technologies" class="tab-label" onclick="toggleTab('Technologies')">Technologies</a>
-                            <div id="Technologies" class="tab-content">
+                            <a href="#embeddedsystems" class="tab-label" onclick="toggleTab('embeddedsystems')">Embedded Systems</a>
+                            <div id="embeddedsystems" class="tab-content">
+                                <p>SPI</p>
+                                <p>UART/USART</p>
+                                <p>I2C</p>
+                                <p>IDEs/Toolchains: Microchip Studio, GCC</p>
+                                <p>Operating Systems: Linux, Windows</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hardware & Debugging -->
+                    <div class="skills-box">
+                        <div class="tab">
+                            <a href="#hardwaredebugging" class="tab-label" onclick="toggleTab('hardwaredebugging')">Hardware and Debugging</a>
+                            <div id="hardwaredebugging" class="tab-content">
+                                <p>Oscilloscope</p>
+                                <p>Logic Analyzer</p>
+                                <p>Function Generator</p>
+                                <p>Digital Multimeter</p>
+                                <p>Soldering</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Software Tools -->
+                    <div class="skills-box">
+                        <div class="tab">
+                            <a href="#softwaretools" class="tab-label" onclick="toggleTab('softwaretools')">Software Tools</a>
+                            <div id="softwaretools" class="tab-content">
+                                <p>OrCad Capture</p>
+                                <p>KiCad</p>
+                                <p>PSpice</p>
+                                <p>LTSpice</p>
+                                <p>VSCode</p>
+                                <p>Git/GitHub</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div class="skills-box">
+                        <div class="tab">
+                            <a href="#webdevtools" class="tab-label" onclick="toggleTab('webdevtools')">Web Development</a>
+                            <div id="webdevtools" class="tab-content">
                                 <p>React</p>
-                                <p><br></p>
                                 <p>Flask</p>
-                                <p><br></p>
-                                <p>SQL</p>
-                                <p><br></p>
                                 <p>HTML</p>
-                                <p><br></p>
                                 <p>CSS</p>
-                                <p><br></p>
-                                <p>VS Code</p>
-                                <p><br></p>
-                                <p>Atmel Studios</p>
-                                <p><br></p>
-                                <p>Git/Github</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="WorkExperience">
+        <div class="WorkExperience-outline">
+            <div class="container">
+                <h1 class="title">Work Experience</h1>
+                <div class="WorkExperience-details-container">
+                    <div class="experience-box">
+                        <div class="tab">
+                            <a href="#experience1" class="tab-label" onclick="toggleTab('experience1')">
+                                Software Engineering Intern — Sechan Electronics Inc.
+                            </a>
+                            <div id="experience1" class="tab-content">
+                                <p>Developed software enabling direct communication between an application and a Linux embedded system, ensuring 100% accuracy of system data transmission and reliable system functionality.</p>
+                                <p>Refactored embedded C code on a microcontroller by consolidating 3 functions and removing over 100 lines of redundant code, improving maintainability and system reliability.</p>
+                                <p>Developed data parsing programs to process over 50 test logs across 4 log types, visualized trends in Excel, and analyzed system-level performance metrics to optimize CPU and memory usage by over 33%, improving system efficiency.</p>
+                                <p>Implemented dynamic configuration management for 5 system parameters, enhancing flexibility and system reliability.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-box">
+                        <div class="tab">
+                            <a href="#experience2" class="tab-label" onclick="toggleTab('experience2')">
+                                Undergraduate Teaching Assistant — Stony Brook University
+                            </a>
+                            <div id="experience2" class="tab-content">
+                                <p>Held weekly 2-hour office hours, helping students improve understanding of advanced data structures and algorithms, resulting in higher lab performance.</p>
+                                <p>Provided guidance during 3-hour weekly lab sessions, supporting hands-on problem solving for 30 students.</p>
+                                <p>Collaborated with the professor and TAs to create practice problems and assess 90 students' mastery, contributing to measurable improvement in course performance.</p>
                             </div>
                         </div>
                     </div>
@@ -125,26 +195,68 @@
         </div>
     </section>
 
-    <section id="contact">
-        <div class="container">
-            <h1>Contact Me</h1>
-            <h2>Feel free to contact me at jjchann31@gmail.com or submit the form below</h2>
-            <form action="jjchann31@gmail.com" method="GET" id="contact-form">
-                <div class="form-group">
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" placeholder="Enter your subject" name="subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" placeholder="Enter your message" name="message" rows="6" required></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Send Message</button>
-                </div>
-            </form>
-        </div>
+    <!-- Projects Section -->
+    <section id="Projects">
+        <div class="Projects-outline section-outline">
+            <div class="container">
+                <h1 class="title">Projects</h1>
+                <div class="Projects-details-container">
+                    <div class="project-box experience-box">
+                        <div class="tab">
+                            <a href="#project1" class="tab-label" onclick="toggleTab('project1')">
+                                Air Measurement System
+                            </a>
+                            <div id="project1" class="tab-content">
+                                <p>Implemented embedded software to interface a Sensirion SCD41 sensor with an LCD module for real-time temperature, humidity, and CO₂ data display.</p>
+                                <p>Developed interrupt-driven logic to optimize system responsiveness and eliminate blocking delays in embedded code.</p>
+                                <p>Utilized Saleae logic analyzer and oscilloscope to verify timing accuracy and correctness of signal transmission under real-time constraints.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-box experience-box">
+                        <div class="tab">
+                            <a href="#project2" class="tab-label" onclick="toggleTab('project2')">
+                                Pulse Width Modulation Generator
+                            </a>
+                            <div id="project2" class="tab-content">
+                                <p>Developed an interrupt-based control software for real-time PWM adjustment, using keypad inputs to dynamically modify duty cycle and frequency.</p>
+                                <p>Interfaced the AVR128DB48 microcontroller with an LCD display via SPI to show live PWM settings and system feedback.</p>
+                                <p>Leveraged edge-triggered GPIO interrupts and streamlined ISR to enable efficient, responsive keypad input handling.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-box experience-box">
+                        <div class="tab">
+                            <a href="#project3" class="tab-label" onclick="toggleTab('project3')">
+                                Controlled Robot Sensor
+                            </a>
+                            <div id="project3" class="tab-content">
+                                <p>Built a remote controlled robot that avoids collisions and constantly collects data from its environment using sensors.</p>
+                                <p>Utilized serial communication protocols for efficient communication between the app and the robot.</p>
+                                <p>Implemented embedded systems principles to ensure flawless performance from multiple sensors.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+        </div> 
     </section>
 
-    
 </body>
 </html>
+
+<script>
+function toggleTab(tabId) {
+    const tab = document.getElementById(tabId);
+
+    if (tab.style.display === "block") {
+        tab.style.display = "none";
+    } else {
+        const allTabs = document.querySelectorAll('.tab-content');
+        allTabs.forEach(t => t.style.display = "none");
+        tab.style.display = "block";
+    }
+}
+</script>
