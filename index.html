@@ -250,13 +250,36 @@
 <script>
 function toggleTab(tabId) {
     const tab = document.getElementById(tabId);
+    const isOpen = window.getComputedStyle(tab).display !== 'none';
 
-    if (tab.style.display === "block") {
-        tab.style.display = "none";
-    } else {
-        const allTabs = document.querySelectorAll('.tab-content');
-        allTabs.forEach(t => t.style.display = "none");
-        tab.style.display = "block";
+    if (isOpen) {
+        tab.style.display = 'none';
+        return;
     }
+
+    document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
+    tab.style.display = 'block';
+
+    requestAnimationFrame(() => {
+        const rect = tab.getBoundingClientRect();
+        const nav = document.querySelector('nav');
+        const navHeight = nav ? nav.getBoundingClientRect().height : 0;
+        const buffer = 20;
+        const available = window.innerHeight - navHeight - buffer * 2;
+
+        let targetY;
+        if (rect.height < available) {
+            const offsetToTopOfViewport = rect.top; 
+            const centerOffset = (available - rect.height) / 2;
+            targetY = window.scrollY + offsetToTopOfViewport - navHeight - centerOffset - buffer;
+        } else {
+            targetY = window.scrollY + rect.top - navHeight - buffer;
+        }
+
+        const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+        targetY = Math.min(Math.max(0, targetY), maxScroll);
+        window.scrollTo({ top: targetY, behavior: 'smooth' });
+    });
 }
 </script>
+
