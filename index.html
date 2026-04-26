@@ -4,69 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeffrey Chan</title>
+    <title>Jeffrey Chan | Embedded Software Engineer</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Home Section -->
-    <div id="Home">
-        <div class="container">
-            <nav> 
-                <ul>
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#SkillsandTech">Skills</a></li>
-                    <li><a href="#WorkExperience">Work Experience</a></li>
-                    <li><a href="#Projects">Projects</a></li>
-                </ul>
-            </nav>
-            <div class="header-text">
-                <div class="text-and-image">
-                    <div class="text">
-                        <p>Computer Engineering Student</p>
-                        <h1> Hi, I'm <span>Jeffrey Chan</span> <br>from NYC and an aspiring software engineer. </h1>
-                    </div>
-                    <img src="images/user.png" alt="Profile Picture">
+
+    <nav> 
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#SkillsandTech">Skills</a></li>
+            <li><a href="#WorkExperience">Work Experience</a></li>
+            <li><a href="#Projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <section id="Home">
+        <div class="header-text">
+            <div class="text-and-image">
+                <div class="text">
+                    <h1>Hello World! I'm <span>Jeffrey Chan</span></h1>
+                    <img src="images/user.png" alt="Jeffrey Chan">
+                    <p class="hero-subtext">NYC • Embedded Software Engineer</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- About Section -->
-    <div id="about">
+    <section id="about">
         <div class="container">
-            <h1>About Me</h1>
-            <p>I'm a senior studying computer engineering at Stony Brook University. 
-               My interests are in embedded systems and frontend development! On my free time I enjoy hanging out with friends, playing video games, and working out.
+            <h1 class="title">About Me</h1>
+            <p> 
+                I graduated from Stony Brook University with a Bachelor’s degree in Computer Engineering, specializing in software engineering and embedded systems. 
+                In my free time, I enjoy working out, spending time with friends, and playing video games. My favorite NBA Players are Kemba Walker and Payton Pritchard!
             </p>
         </div>
-    </div>
+    </section>
     
-    <!-- Education Section -->
     <section id="education">
-        <div class="education-outline">
-            <div class="container">
-                <h1 class="title">Education</h1>
-                <div class="education-details-container">
-                    <div class="education-box">
-                        <p>College: Stony Brook University</p>
-                        <p>Expected Graduation: May 2026</p>
-                        <p>Degree: Bachelor of Engineering in Computer Engineering</p>
-                        <p>GPA: 3.86/4.0</p>
-                        <div class="tab">
-                            <a href="#coursework" class="tab-label" onclick="toggleTab('coursework')">Relevant Coursework</a>
-                            <div id="coursework" class="tab-content">
-                                <p>Programming Fundamentals</p>
-                                <p>Advanced Programming and Data Structures </p>
-                                <p>Software Techniques for Engineers </p>
-                                <p>Embedded System Design I</p>
-                                <p>Embedded System Design II</p>
-                                <p>Digital Design using VHDL and PLDS</p>
-                                <p>Real-Time Operating System </p>
-                                <p>Digital Image Processing</p>
-                                <p>Computer Vision</p>
-                            </div>
+        <div class="container">
+            <h1 class="title">Education</h1>
+            <div class="education-details-container">
+                <div class="experience-box">
+                    <h3 style="color: var(--text-main); margin-bottom: 10px;">Stony Brook University</h3>
+                    <p>Expected Graduation: May 2026</p>
+                    <p>Degree: Bachelor of Engineering in Computer Engineering</p>
+                    <p>GPA: 3.86/4.0</p>
+                    
+                    <div class="tab">
+                        <button class="tab-label" onclick="toggleTab('coursework')">Relevant Coursework</button>
+                        <div id="coursework" class="tab-content" style="display: block;">
+                            <p>Programming Fundamentals</p>
+                            <p>Advanced Programming and Data Structures</p>
+                            <p>Software Techniques for Engineers</p>
+                            <p>Embedded System Design I & II</p>
+                            <p>Digital Design using VHDL and PLDS</p>
+                            <p>Real-Time Operating System</p>
+                            <p>Digital Image Processing</p>
+                            <p>Computer Vision</p>
                         </div>
                     </div>
                 </div>
@@ -74,212 +71,137 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="SkillsandTech">
-        <div class="SkillsandTech-outline">
-            <div class="container">
-                <h1 class="title">Skills</h1>
-                <div class="SkillsandTech-details-container">
-
-                    <!-- Programming Languages -->
-                    <div class="skills-box">
-                        <div class="tab">
-                            <a href="#Languages" class="tab-label" onclick="toggleTab('Languages')">Programming Languages</a>
-                            <div id="Languages" class="tab-content">
-                                <p>C++</p>
-                                <p>C</p>
-                                <p>Python</p>
-                                <p>Assembly (MIPS, AVR)</p>
-                                <p>VHDL</p>
-                                <p>SQL</p>
-                                <p>MATLAB</p>
-                            </div>
-                        </div>
+        <div class="container">
+            <h1 class="title">Skills</h1>
+            <div class="SkillsandTech-details-container">
+                
+                <div class="skills-box">
+                    <button class="tab-label">Programming Languages</button>
+                    <div class="tab-content">
+                        <p>C++</p><p>C</p><p>Python</p><p>JavaScript</p><p>Assembly (MIPS, AVR)</p><p>VHDL</p><p>SQL</p><p>MATLAB</p>
                     </div>
+                </div>
 
-                    <!-- Embedded Systems -->
-                    <div class="skills-box">
-                        <div class="tab">
-                            <a href="#embeddedsystems" class="tab-label" onclick="toggleTab('embeddedsystems')">Embedded Systems</a>
-                            <div id="embeddedsystems" class="tab-content">
-                                <p>SPI</p>
-                                <p>UART/USART</p>
-                                <p>I2C</p>
-                                <p>IDEs/Toolchains: Microchip Studio, GCC</p>
-                                <p>Operating Systems: Linux, Windows</p>
-                            </div>
-                        </div>
+                <div class="skills-box">
+                    <button class="tab-label">Embedded Systems</button>
+                    <div class="tab-content">
+                        <p>SPI</p><p>UART/USART</p><p>I2C</p><p>Microchip Studio</p><p>GCC</p><p>Linux</p><p>Windows</p>
                     </div>
+                </div>
 
-                    <!-- Hardware & Debugging -->
-                    <div class="skills-box">
-                        <div class="tab">
-                            <a href="#hardwaredebugging" class="tab-label" onclick="toggleTab('hardwaredebugging')">Hardware and Debugging</a>
-                            <div id="hardwaredebugging" class="tab-content">
-                                <p>Oscilloscope</p>
-                                <p>Logic Analyzer</p>
-                                <p>Function Generator</p>
-                                <p>Digital Multimeter</p>
-                                <p>Soldering</p>
-                            </div>
-                        </div>
+                <div class="skills-box">
+                    <button class="tab-label">Hardware & Debugging</button>
+                    <div class="tab-content">
+                        <p>Oscilloscope</p><p>Logic Analyzer</p><p>Function Generator</p><p>Multimeter</p><p>Soldering</p>
                     </div>
+                </div>
 
-                    <!-- Software Tools -->
-                    <div class="skills-box">
-                        <div class="tab">
-                            <a href="#softwaretools" class="tab-label" onclick="toggleTab('softwaretools')">Software Tools</a>
-                            <div id="softwaretools" class="tab-content">
-                                <p>OrCad Capture</p>
-                                <p>KiCad</p>
-                                <p>PSpice</p>
-                                <p>LTSpice</p>
-                                <p>VSCode</p>
-                                <p>Git/GitHub</p>
-                            </div>
-                        </div>
+                <div class="skills-box">
+                    <button class="tab-label">Software Tools</button>
+                    <div class="tab-content">
+                        <p>OrCad Capture</p><p>KiCad</p><p>PSpice</p><p>LTSpice</p><p>VSCode</p><p>Git/GitHub</p>
                     </div>
+                </div>
 
-                    <!-- Web Development -->
-                    <div class="skills-box">
-                        <div class="tab">
-                            <a href="#webdevtools" class="tab-label" onclick="toggleTab('webdevtools')">Web Development</a>
-                            <div id="webdevtools" class="tab-content">
-                                <p>React</p>
-                                <p>Flask</p>
-                                <p>HTML</p>
-                                <p>CSS</p>
-                            </div>
-                        </div>
+                <div class="skills-box">
+                    <button class="tab-label">Web Development</button>
+                    <div class="tab-content">
+                        <p>React</p><p>Flask</p><p>HTML</p><p>CSS</p><p>Tailwind CSS</p>
                     </div>
-
                 </div>
             </div>
         </div> 
     </section>
 
-    <!-- Work Experience Section -->
     <section id="WorkExperience">
-        <div class="WorkExperience-outline">
-            <div class="container">
-                <h1 class="title">Work Experience</h1>
-                <div class="WorkExperience-details-container">
-                    <div class="experience-box">
-                        <div class="tab">
-                            <a href="#experience1" class="tab-label" onclick="toggleTab('experience1')">
-                                Software Engineering Intern — Sechan Electronics Inc.
-                            </a>
-                            <div id="experience1" class="tab-content">
-                                <p>Developed software enabling direct communication between an application and a Linux embedded system, ensuring 100% accuracy of system data transmission and reliable system functionality.</p>
-                                <p>Refactored embedded C code on a microcontroller by consolidating 3 functions and removing over 100 lines of redundant code, improving maintainability and system reliability.</p>
-                                <p>Developed data parsing programs to process over 50 test logs across 4 log types, visualized trends in Excel, and analyzed system-level performance metrics to optimize CPU and memory usage by over 33%, improving system efficiency.</p>
-                                <p>Implemented dynamic configuration management for 5 system parameters, enhancing flexibility and system reliability.</p>
-                            </div>
-                        </div>
+        <div class="container">
+            <h1 class="title">Work Experience</h1>
+            <div class="WorkExperience-details-container">
+                <div class="experience-box">
+                    <button class="tab-label">Software Engineering Intern — Sechan Electronics Inc.</button>
+                    <div class="tab-content">
+                        <p>Developed software enabling direct communication between an application and a Linux embedded system, ensuring 100% data accuracy.</p>
+                        <p>Refactored embedded C code, removing over 100 lines of redundant code to improve system reliability.</p>
+                        <p>Analyzed system-level performance metrics to optimize CPU and memory usage by over 33%.</p>
+                        <p>Implemented dynamic configuration management for 5 system parameters, enhancing flexibility.</p>
                     </div>
+                </div>
 
-                    <div class="experience-box">
-                        <div class="tab">
-                            <a href="#experience2" class="tab-label" onclick="toggleTab('experience2')">
-                                Undergraduate Teaching Assistant — Stony Brook University
-                            </a>
-                            <div id="experience2" class="tab-content">
-                                <p>Held weekly 2-hour office hours, helping students improve understanding of advanced data structures and algorithms, resulting in higher lab performance.</p>
-                                <p>Provided guidance during 3-hour weekly lab sessions, supporting hands-on problem solving for 30 students.</p>
-                                <p>Collaborated with the professor and TAs to create practice problems and assess 90 students' mastery, contributing to measurable improvement in course performance.</p>
-                            </div>
-                        </div>
+                <div class="experience-box">
+                    <button class="tab-label">Undergraduate Teaching Assistant — Stony Brook University</button>
+                    <div class="tab-content">
+                        <p>Held weekly office hours, helping students improve understanding of advanced data structures and algorithms.</p>
+                        <p>Provided guidance during 3-hour weekly lab sessions for 30 students.</p>
+                        <p>Collaborated with faculty to create practice problems and assess mastery for 90 students.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="Projects">
-        <div class="Projects-outline section-outline">
-            <div class="container">
-                <h1 class="title">Projects</h1>
-                <div class="Projects-details-container">
-                    <div class="project-box experience-box">
-                        <div class="tab">
-                            <a href="#project1" class="tab-label" onclick="toggleTab('project1')">
-                                Air Measurement System
-                            </a>
-                            <div id="project1" class="tab-content">
-                                <p>Implemented embedded software to interface a Sensirion SCD41 sensor with an LCD module for real-time temperature, humidity, and CO₂ data display.</p>
-                                <p>Developed interrupt-driven logic to optimize system responsiveness and eliminate blocking delays in embedded code.</p>
-                                <p>Utilized Saleae logic analyzer and oscilloscope to verify timing accuracy and correctness of signal transmission under real-time constraints.</p>
-                            </div>
-                        </div>
+        <div class="container">
+            <h1 class="title">Projects</h1>
+            <div class="Projects-details-container">
+                <div class="project-box">
+                    <button class="tab-label">IoT Smart Irrigation System</button>
+                    <div class="tab-content">
+                        <p>Designed and implemented an IoT-based system to monitor soil moisture levels and automate irrigation in real time.</p>
+                        <p>Integrated sensors with a microcontroller to collect environmental data and trigger watering based on threshold conditions.</p>
+                        <p>Developed communication between the device and a backend for remote monitoring and control.</p>
                     </div>
+                </div>
 
-                    <div class="project-box experience-box">
-                        <div class="tab">
-                            <a href="#project2" class="tab-label" onclick="toggleTab('project2')">
-                                Pulse Width Modulation Generator
-                            </a>
-                            <div id="project2" class="tab-content">
-                                <p>Developed an interrupt-based control software for real-time PWM adjustment, using keypad inputs to dynamically modify duty cycle and frequency.</p>
-                                <p>Interfaced the AVR128DB48 microcontroller with an LCD display via SPI to show live PWM settings and system feedback.</p>
-                                <p>Leveraged edge-triggered GPIO interrupts and streamlined ISR to enable efficient, responsive keypad input handling.</p>
-                            </div>
-                        </div>
+                <div class="project-box">
+                    <button class="tab-label">Air Measurement System</button>
+                    <div class="tab-content">
+                        <p>Interfaced Sensirion SCD41 sensor with LCD module for real-time temperature, humidity, and CO₂ monitoring.</p>
+                        <p>Developed interrupt-driven logic to optimize system responsiveness and eliminate blocking delays.</p>
+                        <p>Utilized Saleae logic analyzer and oscilloscope to verify timing accuracy and signal transmission.</p>
                     </div>
+                </div>
 
-                    <div class="project-box experience-box">
-                        <div class="tab">
-                            <a href="#project3" class="tab-label" onclick="toggleTab('project3')">
-                                Controlled Robot Sensor
-                            </a>
-                            <div id="project3" class="tab-content">
-                                <p>Built a remote controlled robot that avoids collisions and constantly collects data from its environment using sensors.</p>
-                                <p>Utilized serial communication protocols for efficient communication between the app and the robot.</p>
-                                <p>Implemented embedded systems principles to ensure flawless performance from multiple sensors.</p>
-                            </div>
-                        </div>
+                <div class="project-box">
+                    <button class="tab-label">Pulse Width Modulation Generator</button>
+                    <div class="tab-content">
+                        <p>Developed interrupt-based control software for real-time PWM adjustment via keypad inputs.</p>
+                        <p>Interfaced AVR128DB48 microcontroller with an LCD display via SPI to show live settings.</p>
+                        <p>Leveraged edge-triggered GPIO interrupts and streamlined ISR for responsive input handling.</p>
                     </div>
-                </div> 
+                </div>
+
+                <div class="project-box">
+                    <button class="tab-label">Controlled Robot Sensor</button>
+                    <div class="tab-content">
+                        <p>Built a remote-controlled robot that avoids collisions using real-time sensor data collection.</p>
+                        <p>Utilized serial communication protocols for efficient data transfer between the control app and the robot.</p>
+                        <p>Implemented embedded principles to ensure flawless performance from multiple integrated sensors.</p>
+                    </div>
+                </div>
             </div> 
         </div> 
     </section>
 
-</body>
-</html>
+    <footer style="text-align: center; padding: 40px; color: var(--text-dim); border-top: 1px solid #222;">
+        <p>&copy; 2026 Jeffrey Chan. All Rights Reserved.</p>
+    </footer>
 
-<script>
-function toggleTab(tabId) {
-    const tab = document.getElementById(tabId);
-    const isOpen = window.getComputedStyle(tab).display !== 'none';
-
-    if (isOpen) {
-        tab.style.display = 'none';
-        return;
-    }
-
-    document.querySelectorAll('.tab-content').forEach(t => t.style.display = 'none');
-    tab.style.display = 'block';
-
-    requestAnimationFrame(() => {
-        const rect = tab.getBoundingClientRect();
-        const nav = document.querySelector('nav');
-        const navHeight = nav ? nav.getBoundingClientRect().height : 0;
-        const buffer = 20;
-        const available = window.innerHeight - navHeight - buffer * 2;
-
-        let targetY;
-        if (rect.height < available) {
-            const offsetToTopOfViewport = rect.top; 
-            const centerOffset = (available - rect.height) / 2;
-            targetY = window.scrollY + offsetToTopOfViewport - navHeight - centerOffset - buffer;
-        } else {
-            targetY = window.scrollY + rect.top - navHeight - buffer;
+    <script>
+        // Tab Toggle Logic
+        function toggleTab(id) {
+            const el = document.getElementById(id);
+            el.style.display = el.style.display === 'block' ? 'none' : 'block';
         }
 
-        const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-        targetY = Math.min(Math.max(0, targetY), maxScroll);
-        window.scrollTo({ top: targetY, behavior: 'smooth' });
-    });
-}
-</script>
+        // Scroll Reveal Logic
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('appear');
+            });
+        }, { threshold: 0.1 });
 
+        document.querySelectorAll('section').forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
