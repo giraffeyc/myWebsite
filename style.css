@@ -74,37 +74,33 @@ nav ul li a:hover {
     text-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
 }
 
-/* ---------- Home Section (Integrated & Centered) ---------- */
+/* ---------- Home Section (Integrated with Typing Animation) ---------- */
 #Home {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Your original centered gradient */
     background: radial-gradient(circle at center, #1a0a0e, #000); 
     padding: 100px 5% 40px 5%;
     opacity: 1; 
     transform: none;
 }
 
-/* This container ensures the content is centered on the page */
 .header-text {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-/* This container forces the vertical stack and centers items */
 .text-and-image {
     display: flex;
-    flex-direction: column; /* Stacks items vertically */
-    align-items: center;    /* Centers items horizontally */
+    flex-direction: column; 
+    align-items: center;    
     justify-content: center;
     text-align: center;
-    gap: 25px;              /* Consistent spacing between elements */
+    gap: 25px;              
 }
 
-/* Updated .text to ensure its internal elements (h1, p) center correctly */
 .text {
     display: flex;
     flex-direction: column;
@@ -113,34 +109,35 @@ nav ul li a:hover {
 }
 
 .text h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     line-height: 1.1;
-    color: var(--text-main);
-    margin: 0; /* Reset margins to let 'gap' handle spacing */
+    color: var(--text-main); /* Keeps "Hello World! I'm" White */
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-/* Your original glow animation */
-.text h1 span {
+/* --- The Typing Container --- */
+.typing-container {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid var(--primary); /* The blinking cursor */
+    width: 0;
+    /* Types over 15s: 1.5s typing, 12s waiting, 1.5s resetting */
+    animation: 
+        type 15s steps(28, end) infinite,
+        blink 0.75s step-end infinite;
+}
+
+/* --- Your Red Name + Glow Animation --- */
+.highlight {
     color: var(--primary);
     display: inline-block;
     animation: glow 3s ease-in-out infinite;
 }
 
-@keyframes glow {
-    0%, 100% { text-shadow: 0 0 5px rgba(255, 51, 102, 0.2); }
-    50% { text-shadow: 0 0 20px rgba(255, 51, 102, 0.6); }
-}
-
-/* Your original subtext styling */
-.hero-subtext {
-    color: var(--secondary);
-    font-family: monospace;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    margin: 0;
-}
-
-/* Your original image styling and hover effects */
+/* --- Original Image Styling --- */
 .text-and-image img {
     width: 280px;
     height: 280px;
@@ -149,11 +146,40 @@ nav ul li a:hover {
     box-shadow: 0 0 30px rgba(255, 51, 102, 0.2);
     object-fit: cover;
     transition: transform 0.5s ease;
-    display: block; /* Prevents inline spacing issues */
+    display: block;
 }
 
 .text-and-image img:hover {
     transform: scale(1.05) rotate(2deg);
+}
+
+/* --- Original Subtext Styling --- */
+.hero-subtext {
+    color: var(--secondary);
+    font-family: monospace;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* --- Keyframes: Typing Logic --- */
+@keyframes type {
+    0% { width: 0; }
+    30% { width: 28ch; }  /* Finished typing */
+    90% { width: 28ch; }  /* Stay visible */
+    100% { width: 0; }    /* Reset */
+}
+
+/* --- Keyframes: Cursor Blink --- */
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--primary); }
+}
+
+/* --- Keyframes: Original Glow --- */
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 5px rgba(255, 51, 102, 0.2); }
+    50% { text-shadow: 0 0 20px rgba(255, 51, 102, 0.6); }
 }
 
 /* ---------- Containers & Content ---------- */
