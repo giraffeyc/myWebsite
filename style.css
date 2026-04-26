@@ -1,338 +1,262 @@
-/* ---------- Global Reset ---------- */
+/* ---------- Global Reset & Variables ---------- */
+:root {
+    --primary: #ff3366;       
+    --secondary: #00f2ff;     
+    --accent: #00ff9d;        
+    --bg-dark: #0a0a0c;       
+    --bg-card: #141417;       
+    --text-main: #ffffff;     
+    --text-dim: #a0a0ab;      
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    background: #0d0d0d;
-    color: #f1f1f1;
-    line-height: 1.6;
+    background: var(--bg-dark);
+    color: var(--text-dim);
+    line-height: 1.7;
+    font-size: 16px;
+    overflow-x: hidden;
 }
 
-/* ---------- Navbar ---------- */
+/* ---------- Scroll Reveal Animation Setup ---------- */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+section.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- Navigation ---------- */
 nav {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 25px 0;
-    background: rgba(20, 20, 20, 0.95);
+    align-items: center;
+    padding: 20px 0;
+    background: rgba(10, 10, 12, 0.9);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
     border-bottom: 1px solid #222;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 40px;
-    margin: 0;
+    gap: 30px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--text-dim);
     text-decoration: none;
-    font-weight: 500;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    font-weight: 600;
 }
 
 nav ul li a:hover {
-    color: #ff3366;
+    color: var(--primary);
+    text-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
 }
 
-/* ---------- Header ---------- */
+/* ---------- Home Section (Integrated & Centered) ---------- */
 #Home {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle at top left, #151515, #000);
-    padding-top: 80px;
+    /* Your original centered gradient */
+    background: radial-gradient(circle at center, #1a0a0e, #000); 
+    padding: 100px 5% 40px 5%;
+    opacity: 1; 
+    transform: none;
 }
 
+/* This container ensures the content is centered on the page */
 .header-text {
-    text-align: center;
-    max-width: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.header-text p {
-    color: #ccc;
-    font-size: 22px;
-    letter-spacing: 1px;
-}
-
-.header-text h1 {
-    font-size: 56px;
-    margin-top: 15px;
-    line-height: 1.2;
-}
-
-.header-text span {
-    color: #ff3366;
-    font-weight: 700;
-}
-
+/* This container forces the vertical stack and centers items */
 .text-and-image {
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center;    /* Centers items horizontally */
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 50px;
+    text-align: center;
+    gap: 25px;              /* Consistent spacing between elements */
 }
 
+/* Updated .text to ensure its internal elements (h1, p) center correctly */
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.text h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1.1;
+    color: var(--text-main);
+    margin: 0; /* Reset margins to let 'gap' handle spacing */
+}
+
+/* Your original glow animation */
+.text h1 span {
+    color: var(--primary);
+    display: inline-block;
+    animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 5px rgba(255, 51, 102, 0.2); }
+    50% { text-shadow: 0 0 20px rgba(255, 51, 102, 0.6); }
+}
+
+/* Your original subtext styling */
+.hero-subtext {
+    color: var(--secondary);
+    font-family: monospace;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Your original image styling and hover effects */
 .text-and-image img {
-    width: 220px;
-    height: 220px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
-    border: 3px solid #ff3366;
-    box-shadow: 0 0 25px rgba(255, 51, 102, 0.3);
-    transition: transform 0.3s ease;
+    border: 4px solid var(--primary);
+    box-shadow: 0 0 30px rgba(255, 51, 102, 0.2);
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block; /* Prevents inline spacing issues */
 }
 
 .text-and-image img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05) rotate(2deg);
 }
 
-/* ---------- Section Titles ---------- */
+/* ---------- Containers & Content ---------- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
 .title {
-    font-size: 38px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    text-align: center;
-    color: #ff3366;
-    letter-spacing: 1px;
+    font-size: 32px;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* ---------- About Section ---------- */
-#about {
-    padding: 100px 10%;
-    background: #101010;
-    text-align: center;
-    font-size: 20px;
-    color: #e0e0e0;
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background: var(--primary);
 }
 
-#about p {
-    max-width: 900px;
-    margin: 0 auto;
-    line-height: 1.8;
-}
-
-/* ---------- Generic Section Wrapper ---------- */
-.section-outline {
-    border: 2px solid #ff3366;
-    border-radius: 12px;
-    padding: 40px;
-    margin: 60px auto;
-    max-width: 85%;
-    background: #151515;
-    box-shadow: 0 0 20px rgba(255, 51, 102, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.section-outline:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0 30px rgba(255, 51, 102, 0.3);
-}
-
-/* ---------- Education, Skills, WorkExperience ---------- */
-#education, #SkillsandTech, #WorkExperience {
-    background: #0d0d0d;
-    padding: 100px 0;
-    text-align: center;
-}
-
-#education .title,
-#SkillsandTech .title,
-#WorkExperience .title {
-    margin-bottom: 40px;
-}
-
-.education-outline,
-.SkillsandTech-outline,
-.WorkExperience-outline {
-    border: 2px solid #ff3366;
-    border-radius: 12px;
-    padding: 40px;
-    margin: 0 auto;
-    max-width: 85%;
-    background: #151515;
-    box-shadow: 0 0 20px rgba(255, 51, 102, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.education-outline:hover,
-.SkillsandTech-outline:hover,
-.WorkExperience-outline:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0 30px rgba(255, 51, 102, 0.3);
-}
-
-.education-details-container,
-.SkillsandTech-details-container,
-.WorkExperience-details-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* ---------- Individual Boxes ---------- */
-.education-box,
-.skills-box,
-.experience-box {
-    text-align: center;
-    padding: 25px;
-    background: #1c1c1c;
-    border-radius: 10px;
-    margin: 20px 0;
-    width: 100%;
-    max-width: 650px;
-    transition: transform 0.2s ease, background 0.3s ease;
-}
-
-.education-box:hover,
-.skills-box:hover,
-.experience-box:hover {
-    background: #242424;
-    transform: translateY(-5px);
-}
-
-/* ---------- Tabs ---------- */
-.tab {
-    margin-top: 15px;
-}
-
-.tab-label {
-    display: block;
-    padding: 12px 18px;
-    font-size: 18px;
-    background: linear-gradient(90deg, #252525, #1a1a1a);
-    border: 1px solid #333;
-    border-radius: 6px;
-    cursor: pointer;
-    color: #fff;
+/* ---------- Cards & Hover States ---------- */
+.skills-box, .experience-box, .project-box {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #222;
     transition: all 0.3s ease;
 }
 
-.tab-label:hover {
-    background: #ff3366;
-    color: #fff;
+.experience-box, .project-box {
+    border-left: 4px solid var(--primary);
 }
 
-.tab-content {
-    display: none;
-    padding: 18px;
-    background: #202020;
-    color: #f1f1f1;
-    border-radius: 6px;
-    margin-top: 10px;
-    text-align: left;
-    animation: fadeIn 0.4s ease;
+.skills-box:hover, .experience-box:hover, .project-box:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+    box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1);
+}
+
+/* ---------- Skills Tags ---------- */
+.SkillsandTech-details-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
 }
 
 .tab-content p {
-    margin-bottom: 10px;
-}
-
-/* ---------- Projects Section ---------- */
-#Projects {
-    background: #0d0d0d;
-    padding: 100px 0;
-    text-align: center;
-}
-
-#Projects .title {
-    margin-bottom: 40px;
-}
-
-.Projects-outline {
-    border: 2px solid #ff3366;
-    border-radius: 12px;
-    padding: 40px;
-    margin: 0 auto;
-    max-width: 85%;
-    background: #151515;
-    box-shadow: 0 0 20px rgba(255, 51, 102, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.Projects-outline:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0 30px rgba(255, 51, 102, 0.3);
-}
-
-.Projects-details-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.project-box {
-    text-align: center;
-    padding: 25px;
-    background: #1c1c1c;
-    border-radius: 10px;
-    margin: 20px 0;
-    width: 100%;
-    max-width: 650px;
-    transition: transform 0.2s ease, background 0.3s ease;
-}
-
-.project-box:hover {
-    background: #242424;
-    transform: translateY(-5px);
-}
-
-.project-box .tab-label {
-    display: block;
-    padding: 12px 18px;
-    font-size: 18px;
-    background: linear-gradient(90deg, #252525, #1a1a1a);
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px 12px;
+    margin: 4px;
+    border-radius: 6px;
+    font-size: 13px;
     border: 1px solid #333;
-    border-radius: 6px;
-    cursor: pointer;
-    color: #fff;
-    transition: all 0.3s ease;
+    color: var(--secondary);
+    font-weight: 600;
 }
 
-.project-box .tab-label:hover {
-    background: #ff3366;
-    color: #fff;
+/* ---------- Experience/Project Lists ---------- */
+.WorkExperience-details-container, .Projects-details-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
 }
 
-.project-box .tab-content {
-    display: none;
-    padding: 18px;
-    background: #202020;
-    color: #f1f1f1;
-    border-radius: 6px;
-    margin-top: 10px;
-    text-align: left;
-    animation: fadeIn 0.4s ease;
+.experience-box .tab-content p, .project-box .tab-content p {
+    display: block;
+    background: transparent;
+    border: none;
+    padding-left: 25px;
+    position: relative;
+    color: var(--text-dim);
 }
 
-.project-box .tab-content p {
+.experience-box .tab-content p::before, .project-box .tab-content p::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.tab-label {
+    background: transparent;
+    border: none;
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 18px;
     margin-bottom: 10px;
+    text-align: left;
+    cursor: pointer;
 }
 
-/* ---------- Animation ---------- */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* ---------- Footer ---------- */
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #ccc;
-    font-size: 16px;
-    border-top: 1px solid #333;
-    background: #0b0b0b;
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .text-and-image { flex-direction: column-reverse; text-align: center; }
+    .WorkExperience-details-container, .Projects-details-container { grid-template-columns: 1fr; }
 }
