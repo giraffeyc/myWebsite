@@ -4,24 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jeffrey Chan — Embedded Software Engineer based in NYC. Portfolio featuring experience, education, skills, and projects.">
     <title>Jeffrey Chan | Embedded Software Engineer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav> 
-        <ul>
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#SkillsandTech">Skills</a></li>
-            <li><a href="#WorkExperience">Work Experience</a></li>
-            <li><a href="#Projects">Projects</a></li>
-        </ul>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="#Home" class="logo">JC<span class="logo-dot">.</span></a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul id="navMenu">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#SkillsandTech">Skills</a></li>
+                <li><a href="#WorkExperience">Work Experience</a></li>
+                <li><a href="#Projects">Projects</a></li>
+            </ul>
+        </div>
     </nav>
 
     <section id="Home">
+        <div class="hero-orb orb1"></div>
+        <div class="hero-orb orb2"></div>
+        <div class="hero-orb orb3"></div>
+
         <div class="header-text">
             <div class="text-and-image">
                 <div class="text">
@@ -30,8 +46,10 @@
                             Hello World! I'm <span class="highlight">Jeffrey Chan</span>
                         </span>
                     </h1>
-                    <img src="images/user.png" alt="Jeffrey Chan">
+                    <img src="Images/user.png" alt="Jeffrey Chan">
                     <p class="hero-subtext">NYC • Embedded Software Engineer</p>
+
+                    <div class="hero-scroll-cue" aria-hidden="true"><span></span></div>
                 </div>
             </div>
         </div>
@@ -39,23 +57,26 @@
 
     <section id="about">
         <div class="container">
-            <h1 class="title">About Me</h1>
-            <p> 
-                I graduated from Stony Brook University with a Bachelor’s degree in Computer Engineering, specializing in software engineering and embedded systems. In my free time, I enjoy working out, spending time with friends, and playing video games. I was a top 1000 player in TFT, and now I compete in tournaments in my free time, aiming to make a name for myself in the competitive scene.
+            <span class="eyebrow reveal">01 · Get to know me</span>
+            <h1 class="title reveal">About Me</h1>
+            <p class="reveal">
+                I graduated from Stony Brook University with a Bachelor’s degree in Computer Engineering, specializing in software engineering and embedded systems.
+                In my free time, I enjoy working out, spending time with friends, and playing video games — gaming is actually what first sparked my interest in computers, and I almost went pro before choosing engineering instead.
             </p>
         </div>
     </section>
-    
+
     <section id="education">
         <div class="container">
-            <h1 class="title">Education</h1>
+            <span class="eyebrow reveal">02 · Academic Background</span>
+            <h1 class="title reveal">Education</h1>
             <div class="education-details-container">
-                <div class="experience-box">
+                <div class="experience-box reveal">
                     <h3 style="color: var(--text-main); margin-bottom: 10px;">Stony Brook University</h3>
-                    <p>Expected Graduation: May 2026</p>
+                    <p>Graduated: May 2026</p>
                     <p>Degree: Bachelor of Engineering in Computer Engineering</p>
-                    <p>GPA: 3.86/4.0</p>
-                    
+                    <p>GPA: 3.86/4.0 <span class="honor-badge">Summa Cum Laude</span></p>
+
                     <div class="tab">
                         <button class="tab-label" onclick="toggleTab('coursework')">Relevant Coursework</button>
                         <div id="coursework" class="tab-content" style="display: block;">
@@ -76,67 +97,97 @@
 
     <section id="SkillsandTech">
         <div class="container">
-            <h1 class="title">Skills</h1>
+            <span class="eyebrow reveal">03 · What I bring</span>
+            <h1 class="title reveal">Skills</h1>
             <div class="SkillsandTech-details-container">
-                
-                <div class="skills-box">
+
+                <div class="skills-box reveal">
                     <button class="tab-label">Programming Languages</button>
                     <div class="tab-content">
                         <p>C++</p><p>C</p><p>Python</p><p>JavaScript</p><p>Assembly (MIPS, AVR)</p><p>VHDL</p><p>SQL</p><p>MATLAB</p>
                     </div>
                 </div>
 
-                <div class="skills-box">
+                <div class="skills-box reveal">
                     <button class="tab-label">Embedded Systems</button>
                     <div class="tab-content">
                         <p>SPI</p><p>UART/USART</p><p>I2C</p><p>Microchip Studio</p><p>GCC</p><p>Linux</p><p>Windows</p>
                     </div>
                 </div>
 
-                <div class="skills-box">
+                <div class="skills-box reveal">
                     <button class="tab-label">Hardware & Debugging</button>
                     <div class="tab-content">
                         <p>Oscilloscope</p><p>Logic Analyzer</p><p>Function Generator</p><p>Multimeter</p><p>Soldering</p>
                     </div>
                 </div>
 
-                <div class="skills-box">
+                <div class="skills-box reveal">
                     <button class="tab-label">Software Tools</button>
                     <div class="tab-content">
                         <p>OrCad Capture</p><p>KiCad</p><p>PSpice</p><p>LTSpice</p><p>VSCode</p><p>Git/GitHub</p>
                     </div>
                 </div>
 
-                <div class="skills-box">
+                <div class="skills-box reveal">
+                    <button class="tab-label">Process & Collaboration</button>
+                    <div class="tab-content">
+                        <p>Agile/Scrum</p><p>Jira</p><p>Jenkins</p>
+                    </div>
+                </div>
+
+                <div class="skills-box reveal">
                     <button class="tab-label">Web Development</button>
                     <div class="tab-content">
                         <p>React</p><p>Flask</p><p>HTML</p><p>CSS</p><p>Tailwind CSS</p>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </section>
 
     <section id="WorkExperience">
         <div class="container">
-            <h1 class="title">Work Experience</h1>
-            <div class="WorkExperience-details-container">
-                <div class="experience-box">
-                    <button class="tab-label">Software Engineering Intern — Sechan Electronics Inc.</button>
-                    <div class="tab-content">
-                        <p>Developed software enabling direct communication between an application and a Linux embedded system, ensuring 100% data accuracy.</p>
-                        <p>Refactored embedded C code, removing over 100 lines of redundant code to improve system reliability.</p>
-                        <p>Analyzed system-level performance metrics to optimize CPU and memory usage by over 33%.</p>
-                        <p>Implemented dynamic configuration management for 5 system parameters, enhancing flexibility.</p>
+            <span class="eyebrow reveal">04 · Where I've worked</span>
+            <h1 class="title reveal">Work Experience</h1>
+
+            <div class="WorkExperience-details-container timeline">
+                <div class="timeline-item current reveal">
+                    <span class="timeline-dot"></span>
+                    <div class="experience-box">
+                        <div class="experience-header">
+                            <h3 class="exp-title">Software Engineer</h3>
+                            <span class="badge-present">Present</span>
+                        </div>
+                        <p class="exp-meta">Raytheon Technologies · June 2026 – Present</p>
+                        <div class="tab-content" style="display: block;">
+                            <p>Currently working as a Software Engineer at Raytheon Technologies.</p>
+                        </div>
                     </div>
                 </div>
 
-                <div class="experience-box">
-                    <button class="tab-label">Undergraduate Teaching Assistant — Stony Brook University</button>
-                    <div class="tab-content">
-                        <p>Held weekly office hours, helping students improve understanding of advanced data structures and algorithms.</p>
-                        <p>Provided guidance during 3-hour weekly lab sessions for 30 students.</p>
-                        <p>Collaborated with faculty to create practice problems and assess mastery for 90 students.</p>
+                <div class="timeline-item reveal">
+                    <span class="timeline-dot"></span>
+                    <div class="experience-box">
+                        <button class="tab-label">Software Engineering Intern — Sechan Electronics Inc.</button>
+                        <div class="tab-content">
+                            <p>Developed software enabling direct communication between an application and a Linux embedded system, ensuring 100% data accuracy.</p>
+                            <p>Refactored embedded C code, removing over 100 lines of redundant code to improve system reliability.</p>
+                            <p>Analyzed system-level performance metrics to optimize CPU and memory usage by over 33%.</p>
+                            <p>Implemented dynamic configuration management for 5 system parameters, enhancing flexibility.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <span class="timeline-dot"></span>
+                    <div class="experience-box">
+                        <button class="tab-label">Undergraduate Teaching Assistant — Stony Brook University</button>
+                        <div class="tab-content">
+                            <p>Held weekly office hours, helping students improve understanding of advanced data structures and algorithms.</p>
+                            <p>Provided guidance during 3-hour weekly lab sessions for 30 students.</p>
+                            <p>Collaborated with faculty to create practice problems and assess mastery for 90 students.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -145,9 +196,10 @@
 
     <section id="Projects">
         <div class="container">
-            <h1 class="title">Projects</h1>
+            <span class="eyebrow reveal">05 · Things I've built</span>
+            <h1 class="title reveal">Projects</h1>
             <div class="Projects-details-container">
-                <div class="project-box">
+                <div class="project-box reveal">
                     <button class="tab-label">IoT Smart Irrigation System</button>
                     <div class="tab-content">
                         <p>Designed and implemented an IoT-based system to monitor soil moisture levels and automate irrigation in real time.</p>
@@ -156,7 +208,7 @@
                     </div>
                 </div>
 
-                <div class="project-box">
+                <div class="project-box reveal">
                     <button class="tab-label">Air Measurement System</button>
                     <div class="tab-content">
                         <p>Interfaced Sensirion SCD41 sensor with LCD module for real-time temperature, humidity, and CO₂ monitoring.</p>
@@ -165,7 +217,7 @@
                     </div>
                 </div>
 
-                <div class="project-box">
+                <div class="project-box reveal">
                     <button class="tab-label">Pulse Width Modulation Generator</button>
                     <div class="tab-content">
                         <p>Developed interrupt-based control software for real-time PWM adjustment via keypad inputs.</p>
@@ -174,7 +226,7 @@
                     </div>
                 </div>
 
-                <div class="project-box">
+                <div class="project-box reveal">
                     <button class="tab-label">Controlled Robot Sensor</button>
                     <div class="tab-content">
                         <p>Built a remote-controlled robot that avoids collisions using real-time sensor data collection.</p>
@@ -182,13 +234,15 @@
                         <p>Implemented embedded principles to ensure flawless performance from multiple integrated sensors.</p>
                     </div>
                 </div>
-            </div> 
-        </div> 
+            </div>
+        </div>
     </section>
 
-    <footer style="text-align: center; padding: 40px; color: var(--text-dim); border-top: 1px solid #222;">
+    <footer class="site-footer">
         <p>&copy; 2026 Jeffrey Chan. All Rights Reserved.</p>
     </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
     <script>
         // Tab Toggle Logic
@@ -197,14 +251,82 @@
             el.style.display = el.style.display === 'block' ? 'none' : 'block';
         }
 
-        // Scroll Reveal Logic
-        const observer = new IntersectionObserver((entries) => {
+        // Section Scroll Reveal
+        const sectionObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('appear');
             });
         }, { threshold: 0.1 });
+        document.querySelectorAll('section').forEach(section => sectionObserver.observe(section));
 
-        document.querySelectorAll('section').forEach(section => observer.observe(section));
+        // Staggered Card Reveal
+        const revealEls = document.querySelectorAll('.reveal');
+        revealEls.forEach((el, i) => {
+            el.style.transitionDelay = `${(i % 6) * 90}ms`;
+        });
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        revealEls.forEach(el => revealObserver.observe(el));
+
+        // Mobile nav toggle
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        navToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('open');
+            navToggle.classList.toggle('active', isOpen);
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Scroll spy, progress bar, shrinking nav, back-to-top visibility
+        const navEl = document.querySelector('nav');
+        const navLinks = document.querySelectorAll('#navMenu a');
+        const sections = document.querySelectorAll('section[id]');
+        const progressBar = document.getElementById('scrollProgress');
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            progressBar.style.width = `${docHeight > 0 ? (scrollTop / docHeight) * 100 : 0}%`;
+
+            navEl.classList.toggle('scrolled', scrollTop > 50);
+            backToTop.classList.toggle('show', scrollTop > 600);
+        }, { passive: true });
+
+        const spyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                    });
+                }
+            });
+        }, { threshold: 0.4 });
+        sections.forEach(section => spyObserver.observe(section));
+
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Cursor glow — pointer devices only
+        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+            const glow = document.getElementById('cursorGlow');
+            window.addEventListener('mousemove', (e) => {
+                glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%)`;
+            }, { passive: true });
+        }
     </script>
 </body>
 </html>
